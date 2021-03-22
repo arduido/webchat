@@ -5,7 +5,7 @@
 This is an attempt to show how to create a simple chat UI and functionality with javascript and Bootstrap for the styling. 
 ---
 ## Built With
-** This project uses localStorage [title](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+** This project uses localStorage [mozilla localStorage link](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
 - Javascript
 - HTML
 - CSS
