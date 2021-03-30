@@ -1,0 +1,36 @@
+#chatDisp {
+  height: 500px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5px;
+  overflow-wrap: break-word;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.container {
+  height: 700px;
+}
+
+.avatar {
+  height: 75px;
+  box-shadow: 1px 1px 4px #ccc;
+  border-radius: 5px;
+}
+
+.text {
+  width: 80%;
+  padding: 10px;
+  text-align: justify;
+  height: 55px;
+  overflow: hidden;
+}
+
+.datetime {
+  float: right;
+  margin: 0;
+  margin-right: 15px;
+  padding: 5px;
+  visibility: visible;
+  font-size: 0.8em;
+}

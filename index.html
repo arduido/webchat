@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>chat example</title>
+    <link
+      href="https://getbootstrap.com/docs/4.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container bg-light">
+      <!-- the header bar that contains the hello message, users name and static avatar -->
+      <div
+        class="d-flex align-items-center p-3 my-3 bg-dark text-white-50 bg-purple rounded shadow-sm"
+      >
+        <img
+          class="mr-3"
+          src="http://robohash.org/2.png?set=set3"
+          alt=""
+          width="48"
+          height="48"
+        />
+        <div class="lh-100">
+          <h6 class="mb-0 text-white lh-100">
+            Hello <span id="userName"></span>!
+          </h6>
+          <small>Robohash Chat</small>
+        </div>
+      </div>
+      <!-- chat display is the window where the messages will be displayed, the messages are constructed in the script file -->
+      <div id="chatDisp" class="my-3 p-3 bg-white rounded shadow-sm"></div>
+      <div id="input">
+        <p id="typing">Typing...</p>
+        <div class="input-group mb-3">
+          <input
+            id="messageInput"
+            type="text"
+            class="form-control"
+            placeholder="Chat Message"
+            aria-label="Chat Message"
+            aria-describedby="button-addon2"
+          />
+          <div class="input-group-append">
+            <button
+              class="btn btn-outline-secondary bg-dark"
+              for="messageInput"
+              type="button"
+              id="sendMessage"
+            >
+              Send
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- modal for the event if no text input -->
+    <div id="textModal" class="modal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Attention</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Your message didn not contain any text!</p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- scripts should be added before the closing body tag to ensure page load time is optimal and scripts are ordered based upon dependency -->
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://getbootstrap.com/docs/3.4/dist/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
