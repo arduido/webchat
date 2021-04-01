@@ -1,5 +1,6 @@
 localStorage.clear();
 var userName = prompt('Enter your Name...', 'User');
+var atPerson = prompt('Who do you want to chat at?');
 var nam = document.getElementById('userName');
 nam.innerHTML = userName;
 // here I am making these key elements accessible from a single variable
@@ -19,7 +20,7 @@ inputField.addEventListener('keyup', function () {
 var displayChat = document.getElementById('chatDisp');
 
 if (!localStorage.getItem('chat')) {
-  // we are setting 'chat' to be able to return the stringified object inside an array json.stringify([])
+  // we are setting 'chat' to be able to return the stringified object inside an array using json.stringify([])
   localStorage.setItem('chat', JSON.stringify([]));
 }
 // here chatHistory is becoming an object using json.parse
@@ -37,7 +38,7 @@ send.addEventListener('click', function () {
   let randnum = Math.floor(Math.random() * 21);
   //
   var message = {
-    name: userName,
+    name: Person,
     text: document.getElementById('messageInput').value,
     dateTime: new Date().toLocaleTimeString() + ' ' + new Date().toDateString(),
     src: 'http://robohash.org/' + randnum + '.png?set=set3',
@@ -67,5 +68,6 @@ send.addEventListener('click', function () {
     '</div>' +
     "<div class='clearfix'></div> <hr>";
   i++;
+  //innerhtml will take the value of the preceding variable some html element and insert the value(s) from teh assigned value(s)
   chatDisplay.innerHTML += templateDiv;
 });
